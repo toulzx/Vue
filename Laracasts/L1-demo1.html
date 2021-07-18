@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L1_1</title>
+    </head>
+    <body>
+        <input type="text" id="input"></input>
+        
+
+         <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+         <script>
+             let data = {
+                message: 'In original JS we have to...'               
+             };
+             //符合 es6 标注的语法
+
+             document.querySelector('#input').value = data.message;
+            // 传统的做法是深入 dom 进行操作。
+            //但我们想要的是忽略这个过程，让它自动绑定，并且实时更新，这就是 Vue 的特点
+
+         </script>
+
+    </body>
+</html>

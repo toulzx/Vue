@@ -1,0 +1,71 @@
+<!-- Compare it to L4-demo -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L3</title>
+    </head>
+    <body>
+        <div id="root">
+
+            <h2> Solution A </h2>
+            <ul>
+                <li v-for="name in names" v-text="name"></li>
+            </ul>
+
+            <h2> Solution B </h2>
+            <ul>
+                <li v-for="name in names">{{ name }}</li>
+            </ul>
+
+
+            <h2> Function A </h2>
+            <input type="text" id="input"></input>
+            <button id="button">Add name</button>
+
+            <h2> Function B </h2>
+            <p> 
+                use devtools in order to push an element into ul
+                <br/>
+                <code> $vm0.names.push("hello") </code>
+            </p>
+
+        </div>
+
+
+        <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+        <script>
+
+            var app = new Vue({
+                
+                el: '#root',
+                
+                data: {
+                    names: ['Joe','Mary','Jane','Jack']
+                },
+
+                mounted(){
+
+                    alert("loaded immediately when ready~");
+
+                    document.querySelector('#button').addEventListener('click', ()=> {
+                                        
+                        let name = document.querySelector('#input').value;
+
+                        app.names.push(name);
+
+                        name.value = '';
+
+                    });
+                    // mounted 方法
+                    // es6 语法特性：箭头函数
+                    // 对数组的操作：`.push`
+
+                }
+
+            });
+                                
+            
+        </script>
+    </body>
+</html>
