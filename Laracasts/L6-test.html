@@ -1,0 +1,111 @@
+  <!-- test: 设置按钮实现状态修改 -->
+  
+  <!DOCTYPE html>
+
+  <html>
+
+  <head>
+      
+    <title>L6 assignment</title>
+
+  </head>
+  <body>
+
+    <div id="root">
+
+        <h2> {{ reverseMessage }} </h2>
+
+        <ul>
+
+            <li v-for="task in tasks" v-text="task.description"></li>
+
+        </ul>
+
+
+        <h2> complete task </h2>
+
+        <ul>
+
+            <li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li>
+
+        </ul>
+
+
+        <h2> incomplete tasks </h2>
+
+        <ul>
+
+            <li v-for="task in incompleteTasks" >
+                
+                {{task.description}}
+ 
+                <button @click="completeTask(task)"> complete </button>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue ({
+            
+            el: '#root',
+
+            data: {
+                
+                message: "All Tasks",
+
+                tasks: [
+
+                    { description: 'Go to the store', completed: true },
+                    
+                    { description: 'Finish screenCast', completed: false },
+
+                    { description: 'Make donation', completed: false },
+
+                    { description: 'Clear inbox', completed: false },
+
+                    { description: 'Make dinner', completed: false },
+
+                    { description: 'Clean room', completed: true },
+                ],
+            
+            },
+
+            computed: {
+                
+                reverseMessage() {
+
+                    return this.message.split('').reverse().join('');
+
+                },
+
+                incompleteTasks() {
+
+                    return this.tasks.filter( task => ! task.completed );
+
+                },
+            
+            },
+
+            methods: {
+                
+                completeTask(task) {
+
+                    task.completed = true;
+                
+                }
+
+            },
+              
+            // ```<li></li>```中如果要添加其它元素，就不能再使用``v-text``了
+            // 增加了一个 ``completeTask(task)`` 方法和 ``v-if`` 的用法
+
+        });
+    </script>
+
+  </body>
+  </html>

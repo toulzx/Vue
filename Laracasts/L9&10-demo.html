@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> L9 </title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.css">
+        
+        <style type="text/css">body { padding-top: 40px; }</style>
+
+    </head>
+
+    <body>
+
+        <div id="root">
+
+            <laracasts-message title="Hello World" body="Lorem ipsum dolar sit amet."></laracasts-message>
+
+            <laracasts-message title="Hello University" body="Bla bla bal"></laracasts-message>
+
+            <div>
+                
+                <laracasts-modal @change=" message = '' "></laracasts-modal>
+
+                <p>{{ message }}</p>
+
+            </div>
+            
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+        <script src="L9&10-demo.js"></script>
+
+    </body>
+    
+</html>

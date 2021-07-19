@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+  <title>L6</title>
+
+</head>
+<body>
+
+  <div id="root">
+
+      <h2> {{ reverseMessage }} </h2>
+
+      <ul>
+
+          <li v-for="task in tasks" v-text="task.description"></li>
+
+      </ul>
+
+      <h2> incomplete tasks </h2>
+
+      <ul>
+
+          <li v-for="task in incompleteTasks" v-text="task.description"></li>
+
+      </ul>
+
+  </div>
+
+  <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+  <script>
+      var app = new Vue ({
+          
+          el: '#root',
+
+          data: {
+              
+              message: "All Tasks",
+
+              tasks: [
+
+                  { description: 'Go to the store', completed: true },
+                  
+                  { description: 'Finish screenCast', completed: false },
+
+                  { description: 'Make donation', completed: false },
+
+                  { description: 'Clear inbox', completed: false },
+
+                  { description: 'Make dinner', completed: false },
+
+                  { description: 'Clean room', completed: true },
+              ],
+          
+          },
+
+          computed: {
+              
+              reverseMessage() {
+
+                  return this.message.split('').reverse().join('');
+
+              },
+
+              incompleteTasks() {
+
+                  return this.tasks.filter( task => ! task.completed );
+
+              }
+          
+          }
+
+          // computed 计算属性
+          // 对字符串的操作：```.split(); .reverse(); .join();```
+          // 过滤器：``filters``
+          // es6 语法 箭头函数
+          
+
+      })
+  </script>
+
+</body>
+</html>
