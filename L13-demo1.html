@@ -1,0 +1,37 @@
+<!-- compare it with L12-demo -->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> L13 </title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css"></link>
+
+        <style>
+
+            body { padding-top: 40px; }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="root" class="container">
+
+            <conpon v-on:applied="onConponApplied"></conpon>
+
+            <h1 v-if="conponApplied">You used a conpon!</h1>
+            
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+        <script src="L13-demo1.js"></script>
+
+    </body>
+    
+</html>
