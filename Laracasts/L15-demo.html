@@ -1,0 +1,46 @@
+<!-- Learning temp slot -->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> L15 </title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.css"></link>
+
+        <style>
+
+            body { padding-top: 40px; }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="root" class="container">
+
+            <progress-view inline-template>
+
+                <div> <!-- 对 inline-template 和 template 的限制仍然存在 -->
+
+                    <h1>Your Progress Through This Is {{ completionRate }}</h1>
+
+                    <p><button @click="completionRate += 10">Update Completion Rate</button></p>
+
+                </div>
+                
+            </progress-view>
+           
+            
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+        <script src="L15-demo.js"></script>
+
+    </body>
+    
+</html>
