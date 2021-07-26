@@ -1,6 +1,22 @@
 # my-app
 
-> A Vue.js project
+> A Vue.js project for Vue study
+
+> learn in Laracasts
+
+>
+
+## Record of lessons
+
+### L16
+
+use webpack to build a demo
+
+### L17
+
+Experience Hot Module Replacement
+
+---
 
 ## Build Setup
 
