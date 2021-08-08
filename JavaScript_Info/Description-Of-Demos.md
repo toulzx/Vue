@@ -43,3 +43,12 @@ js放在head中会立即执行，阻塞后续的资源下载与执行。因为js
 - 回调函数
 - 匿名函数
 - 箭头函数
+
+## [task7](task7.html)
+
+- TDD 测试驱动开发
+
+## [task8](task8.js)
+
+- 对象的创建与使用
+- [练习：将数值属性值都乘以 2（要求遵循 TDD 开发）](https://zh.javascript.info/task/multiply-numeric)

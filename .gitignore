@@ -49,3 +49,6 @@ yarn-error.log*
 *~
 .DS_Store
 gradle.properties
+# JavaScript-Info 文件夹
+JavaScript_Info/test.html
+JavaScript_Info/test.js
