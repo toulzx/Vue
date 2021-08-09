@@ -1,5 +1,23 @@
 // 对象
 
+
+// 添加属性
+
+let user = {
+  name: "John",
+  age: 30
+};
+
+user.sayHi = function() {
+  alert("Hello!");
+};
+
+for( let key in user ) {
+  alert( key );
+}
+
+// const 和 方括号
+
 const user = {     			// const 声明仅仅固定了 user本身 而不是其内容
   name : "John",  				// 键 "name"，值 "John"
   age : 30,        				// 键 "age"，值 30
@@ -66,3 +84,24 @@ for(let code in codes) {
 }
 
 
+// 对象的复制和拷贝
+
+let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+
+let clone = Object.assign({}, user);
+
+alert( user.sizes === clone.sizes ); // true，同一个对象（注意，后面会详细说明对象的比较）
+
+// user 和 clone 分享同一个 sizes
+user.sizes.width++;       // 通过其中一个改变属性值
+alert( clone.sizes.width ); // 51，能从另外一个看到变更的结
+
+// user 和 clone 不分享同一个 原始属性
+user.name = "Peter";        // 通过其中一个改变属性值
+alert( clone.name );        // "John"，另一个并没有改变

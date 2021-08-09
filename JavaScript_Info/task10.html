@@ -1,0 +1,32 @@
+<!doctype html>
+<script src="https://zh.js.cx/test/libs.js"></script>
+<script src="task10.js"></script>
+<script>
+
+let calculator = {
+  value1: 0,
+  value2: 0,
+
+  read() {
+    this.value1 = +prompt("value1",0);
+    this.value2 = +prompt("value2",0);
+  },
+
+  // sum :  =>
+  //   (this.value1 + this.value2) ,    // 对象中不能使用箭头函数！！！见：http://www.dovov.com/es6-3.html
+  sum() {
+    return this.value1 + this.value2
+  },
+
+  mul() {
+    return this.value1 * this.value2;
+  }
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+</script>
+
+</html>

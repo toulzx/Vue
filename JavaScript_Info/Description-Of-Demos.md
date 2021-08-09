@@ -52,3 +52,15 @@ js放在head中会立即执行，阻塞后续的资源下载与执行。因为js
 
 - 对象的创建与使用
 - [练习：将数值属性值都乘以 2（要求遵循 TDD 开发）](https://zh.javascript.info/task/multiply-numeric)
+- 对象的浅拷贝、深拷贝
+- 对象中的方法和 this
+- [练习：在对象字面量中使用"this"](https://zh.javascript.info/task/object-property-this)
+
+## [task9](task9.js)
+
+- 对象的方法和 this
+
+## [task10](task10.html)
+
+- [练习：创建一个计算器](https://zh.javascript.info/task/calculator)
+  - 尽管有沙箱和答案，但在这里我自己又重复实践了以便，并有了新的收获
