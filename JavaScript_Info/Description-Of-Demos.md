@@ -60,7 +60,12 @@ js放在head中会立即执行，阻塞后续的资源下载与执行。因为js
 
 - 对象的方法和 this
 
-## [task10](task10.html)
+## [task11](task11.html)
+
+- 对象中构造器的使用
+
+## [task11](task11.html)
 
 - [练习：创建一个计算器](https://zh.javascript.info/task/calculator)
   - 尽管有沙箱和答案，但在这里我自己又重复实践了以便，并有了新的收获
+- [练习：使用构造函数创建一个计算器](https://zh.javascript.info/constructor-new)
