@@ -81,3 +81,9 @@ js放在head中会立即执行，阻塞后续的资源下载与执行。因为js
 ## [task13](task13.js)
 
 - 原始数据类型 & 对象包装器
+- 数字类型
+  - 不精确计算
+  - toString(base)
+  - isNaN( ) & isFinite()
+  - Object.is()
+  - parseInt() & parseFloat()
