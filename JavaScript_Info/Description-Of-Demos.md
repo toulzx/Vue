@@ -87,3 +87,14 @@ js放在head中会立即执行，阻塞后续的资源下载与执行。因为js
   - isNaN( ) & isFinite()
   - Object.is()
   - parseInt() & parseFloat()
+
+## [task14](task14.js)
+
+- 字符串的表示
+- 反引号的额外用法
+- 访问字符的方法
+  - []
+  - charAt
+  - for..of
+- if (~str.indexOf("Widget"))
+- if (str.includes("Widget"))
