@@ -98,3 +98,14 @@ js放在head中会立即执行，阻塞后续的资源下载与执行。因为js
   - for..of
 - if (~str.indexOf("Widget"))
 - if (str.includes("Widget"))
+
+## [task15](task15.js)
+
+- 数组是特殊的对象，双端队列
+- for..of 遍历数组
+- toString方法、length属性、创建数组的方式
+- [练习：输入数字求和](https://zh.javascript.info/task/array-input-sum)
+  - 易错
+- [练习：最大子数组](https://zh.javascript.info/task/maximal-subarray)
+  - 算法优化
+  - TDD 测试驱动开发
